@@ -5,6 +5,10 @@ _beamsim_jupyter_build_vars() {
     build_is_public=1
     build_passenv='PYKERN_BRANCH SIREPO_BRANCH'
     : ${PYKERN_BRANCH:=} ${SIREPO_BRANCH:=}
+    # POSIT: comes from beamsim-jupyter-base
+    beamsim_jupyter_boot_dir=$build_run_user_home/.radia-run
+    beamsim_jupyter_radia_run_boot=$beamsim_jupyter_boot_dir/start
+    build_docker_cmd='["'"$beamsim_jupyter_radia_run_boot"'"]'
 }
 
 build_as_run_user() {
