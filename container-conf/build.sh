@@ -17,8 +17,6 @@ build_as_run_user() {
     pip install .
     cd ..
     _beamsim_jupyter_clone sirepo "$SIREPO_BRANCH"
-    pip install -e .
-    sirepo srw create_predefined
     pip install .
     cd ..
 }
